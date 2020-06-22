@@ -15,7 +15,7 @@
       backup: yes
 
   - name: "Reload NGINX"
-    command: "nginx -s reload"
+    command: "/usr/sbin/nginx -s reload"
     become: yes
     become_user: mholland
     become_method: sudo
