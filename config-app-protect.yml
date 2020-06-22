@@ -1,7 +1,7 @@
 ---
 - name: Update NAP Config
   hosts: 10.200.1.145
-  
+
   tasks:
   - name: "Ensure NGINX WAF Policy Directory Exists"
     file:
@@ -13,8 +13,7 @@
       src: "{{ nginx_main_upload_src | default('dvwa-policy-v1.json') }}"
       dest: "{{ nginx_main_upload_dest | default('/etc/nginx/wafpolicy') }}"
       backup: yes
-    notify: "Reload NGINX"
 
   - name: "Reload NGINX"
     command: "nginx -s reload"
-    changed_when: false
+    
