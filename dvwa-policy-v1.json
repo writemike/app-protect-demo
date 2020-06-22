@@ -1,0 +1,23 @@
+{
+    "policy": {
+        "name": "dvwa",
+        "template": { "name": "POLICY_TEMPLATE_NGINX_BASE" },
+        "applicationLanguage": "utf-8",
+        "enforcementMode": "blocking",
+        "blocking-settings": {
+            "violations": [
+                {
+                  "name": "VIOL_HTTP_PROTOCOL",
+                      "alarm": true,
+                      "block": true
+                }
+            ],
+            "http-protocols": [
+                {
+                    "description": "Bad host header value",
+                    "enabled": true
+                }
+            ]  
+        }
+    }
+}
