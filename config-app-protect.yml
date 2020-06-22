@@ -16,7 +16,4 @@
 
   - name: "Reload NGINX"
     command: "/usr/sbin/nginx -s reload"
-    become: yes
-    become_user: mholland
-    become_method: sudo
     
