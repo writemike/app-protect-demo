@@ -1,5 +1,8 @@
 ---
-- tasks:
+- name: Update NAP Config
+  hosts: 10.200.1.145
+  
+  tasks:
   - name: "Ensure NGINX WAF Policy Directory Exists"
     file:
       path: "{{ nginx_main_upload_dest | default('/etc/nginx/wafpolicy') }}"
