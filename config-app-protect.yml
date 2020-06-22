@@ -16,4 +16,5 @@
 
   - name: "Reload NGINX"
     command: "nginx -s reload"
+    become: yes
     
