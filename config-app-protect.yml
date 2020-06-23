@@ -1,6 +1,7 @@
 ---
 - name: Update NAP Config
   hosts: 10.200.1.145
+  gather_facts: no
 
   tasks:
   - name: "Ensure NGINX WAF Policy Directory Exists"
